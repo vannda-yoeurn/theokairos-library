@@ -45,7 +45,20 @@ img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
 .cardb:hover .cv,.cardb:focus-visible .cv{transform:translateY(-6px);box-shadow:0 18px 34px -10px rgba(20,35,74,.55)}
 .cardb h3{font-size:16px;line-height:1.7;margin:14px 0 2px;font-weight:600}
 .cardb p{margin:0;font-size:13px;color:var(--muted);line-height:1.7}
-.foot{text-align:center;color:var(--muted);font-size:13px;padding:24px 16px 40px;border-top:1px solid var(--line);line-height:1.9}
+.author{margin:70px auto 0;max-width:960px;display:grid;grid-template-columns:220px 1fr;gap:40px;align-items:start;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:36px;position:relative}
+.author:before{content:"";position:absolute;left:36px;right:36px;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+@media (max-width:720px){.author{grid-template-columns:1fr;padding:26px 20px;gap:22px;text-align:center}.au-photo{margin:0 auto}}
+.au-photo{width:220px;height:220px;border-radius:50%;overflow:hidden;border:4px solid var(--gold2);box-shadow:0 12px 28px -10px rgba(20,35,74,.5);background:var(--navy);display:grid;place-items:center}
+.au-photo img{width:100%;height:100%;object-fit:cover}
+.au-photo span{display:none;font-family:Moul,serif;color:var(--gold2);font-size:56px}
+.au-photo.noimg img{display:none}.au-photo.noimg span{display:block}
+.au-kick{color:var(--gold);font-size:13px;letter-spacing:2px;font-weight:600}
+.author h2{font-family:Moul,serif;font-weight:400;color:var(--navy);font-size:clamp(22px,3.4vw,30px);line-height:1.7;margin:6px 0 14px}
+.author p{line-height:2;color:#3b3f4a;font-size:15.5px;margin:0 0 12px}
+@media (max-width:720px){.author p{text-align:left}}
+.author .au-motto{font-family:"Noto Serif Khmer",serif;font-size:17px;color:var(--navy2);border-left:3px solid var(--gold);padding-left:14px;text-align:left}
+.author .au-sdg{font-style:italic;color:var(--gold);margin-top:18px;text-align:center}
+.foot{margin-top:60px;text-align:center;color:var(--muted);font-size:13px;padding:24px 16px 40px;border-top:1px solid var(--line);line-height:1.9}
 .foot i{font-family:Georgia,serif;letter-spacing:2px}
 
 /* ---------- book page ---------- */
@@ -153,6 +166,19 @@ img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
   <main class="lib">
     <p class="intro">សៀវភៅទាំងអស់ក្នុងបណ្ណាល័យនេះ អាចអានបានដោយឥតគិតថ្លៃ និងមិនចាំបាច់ចុះឈ្មោះ សម្រាប់អ្នកជឿ ក្រុមសិក្សាព្រះគម្ពីរ គ្រូគង្វាល និងនិស្សិតទេវវិទ្យា។ សូមជ្រើសរើសសៀវភៅមួយក្បាល ដើម្បីចាប់ផ្ដើមអាន។</p>
     <div class="grid" id="grid"></div>
+
+    <section class="author">
+      <div class="au-photo"><img src="covers/author.jpg" alt="គ្រូគង្វាល យឿន វ៉ាន់ដា" onerror="this.parentNode.classList.add('noimg')"><span>យវ</span></div>
+      <div class="au-text">
+        <div class="au-kick">អំពីអ្នកនិពន្ធ</div>
+        <h2>គ្រូគង្វាល យឿន វ៉ាន់ដា</h2>
+        <p class="au-motto">«ការកោតខ្លាចព្រះ និងចំណេះដឹង» — នេះមិនមែនគ្រាន់តែជាបាវចនារបស់វិទ្យាស្ថានទេ គឺជាដំណើរជីវិតរបស់លោក។</p>
+        <p>ពីទីជនបទនៅតំបន់ព្រំដែន ស្រុកម៉ាឡៃ ខេត្តបន្ទាយមានជ័យ គ្រូគង្វាល យឿន វ៉ាន់ដា បានបម្រើក្រុមជំនុំខ្មែរ ដោយចិត្តស្រឡាញ់ព្រះបន្ទូល និងសេចក្ដីប្រាថ្នាចង់ឲ្យគ្រីស្ទបរិស័ទខ្មែរគ្រប់រូប មានធនធានល្អសម្រាប់សិក្សាព្រះគម្ពីរជាភាសាកំណើតរបស់ខ្លួន។</p>
+        <p>លោកជានាយកផ្នែកសិក្សាធិការ នៃវិទ្យាស្ថានទេវសាស្ត្រថេអូខៃរ៉ុស មានសញ្ញាបត្របរិញ្ញាបត្រ និងអនុបណ្ឌិតផ្នែកទេវវិទ្យា ហើយក៏ជាសាស្ត្រាចារ្យភាសាកូរ៉េ នៅសាកលវិទ្យាល័យជាតិមានជ័យផងដែរ។ ដោយធ្វើការរវាងភាសាខ្មែរ កូរ៉េ និងអង់គ្លេស លោកបាននិពន្ធ រៀបរៀង និងបកប្រែសៀវភៅជាច្រើន ចាប់ពីប្រវត្តិសាស្ត្រក្រុមជំនុំ ប្រព័ន្ធទេវសាស្ត្រ រហូតដល់វចនានុក្រមព្រះគម្ពីរ។</p>
+        <p>បណ្ណាល័យនេះគឺជាអំណោយរបស់លោកដល់ក្រុមជំនុំខ្មែរ៖ សៀវភៅទាំងអស់ អានបានដោយឥតគិតថ្លៃ គ្រប់ទីកន្លែង គ្រប់ពេលវេលា។</p>
+        <p class="au-sdg">Soli Deo Gloria — សូមថ្វាយសិរីល្អដល់ព្រះជាម្ចាស់តែមួយ</p>
+      </div>
+    </section>
   </main>
   <footer class="foot">
     © វិទ្យាស្ថានទេវសាស្ត្រថេអូខៃរ៉ុស · យឿន វ៉ាន់ដា<br>
