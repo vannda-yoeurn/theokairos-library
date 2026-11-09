@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="km">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>បណ្ណាល័យថេអូខៃរ៉ុស</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Moul&family=Kantumruy+Pro:wght@400;500;600;700&family=Noto+Serif+Khmer:wght@400;600;700&family=Noto+Sans+KR:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14234a; --navy2:#1d3266; --gold:#c49a3a; --gold2:#e6c878;
+  --paper:#f7f2e6; --ink:#1d2433; --muted:#6b6a64; --line:#e3dac4; --card:#fffdf7;
+  --rs:19px;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{font-family:"Kantumruy Pro","Noto Sans KR",sans-serif;background:var(--paper);color:var(--ink);-webkit-font-smoothing:antialiased}
+button{font-family:inherit;cursor:pointer}
+a{color:inherit}
+.hidden{display:none!important}
+
+/* ---------- protection ---------- */
+.reader, .book, .lib{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
+@media print{body *{display:none!important} body:after{content:"សៀវភៅនេះសម្រាប់អានលើគេហទំព័រប៉ុណ្ណោះ";display:block;padding:40px;font-size:20px}}
+
+/* ---------- library ---------- */
+.hero{background:radial-gradient(1200px 400px at 50% -10%,#2a447f 0%,var(--navy) 60%);color:#f4ead2;text-align:center;padding:56px 20px 64px;position:relative;overflow:hidden}
+.hero:before,.hero:after{content:"";position:absolute;left:50%;transform:translateX(-50%);width:min(560px,80%);height:1px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+.hero:before{top:26px}.hero:after{bottom:26px}
+.hero .gem{color:var(--gold);letter-spacing:10px;font-size:13px}
+.hero h1{font-family:Moul,serif;font-weight:400;font-size:clamp(30px,6vw,52px);line-height:1.6;margin:10px 0 4px;color:var(--gold2)}
+.hero .by{font-size:clamp(16px,2.6vw,20px);color:#efe4c8;margin:0}
+.hero .by b{font-family:Moul,serif;font-weight:400;color:#fff;margin-left:6px}
+.hero .inst{margin-top:18px;font-size:14px;color:#c8bfa8}
+.hero .inst span{display:block;letter-spacing:4px;font-size:11px;margin-top:4px;color:#9fa8c0}
+.lib{max-width:1180px;margin:0 auto;padding:36px 20px 70px}
+.intro{max-width:720px;margin:0 auto 34px;text-align:center;color:var(--muted);line-height:1.9;font-size:16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:30px 22px}
+.cardb{background:none;border:0;padding:0;text-align:left;color:inherit}
+.cv{aspect-ratio:7/10;border-radius:4px 10px 10px 4px;overflow:hidden;box-shadow:0 1px 0 rgba(0,0,0,.05),0 10px 24px -8px rgba(20,35,74,.45),inset 4px 0 0 rgba(0,0,0,.15);transition:transform .25s,box-shadow .25s;position:relative}
+.cv img{width:100%;height:100%;object-fit:contain;display:block}
+.cv:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.18),transparent 6%,transparent 94%,rgba(255,255,255,.08))}
+.cardb:hover .cv,.cardb:focus-visible .cv{transform:translateY(-6px);box-shadow:0 18px 34px -10px rgba(20,35,74,.55)}
+.cardb h3{font-size:16px;line-height:1.7;margin:14px 0 2px;font-weight:600}
+.cardb p{margin:0;font-size:13px;color:var(--muted);line-height:1.7}
+.foot{text-align:center;color:var(--muted);font-size:13px;padding:24px 16px 40px;border-top:1px solid var(--line);line-height:1.9}
+.foot i{font-family:Georgia,serif;letter-spacing:2px}
+
+/* ---------- book page ---------- */
+.topbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:8px;padding:10px 14px;background:rgba(247,242,230,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.ib{border:0;background:transparent;width:40px;height:40px;border-radius:10px;display:grid;place-items:center;color:var(--ink);font-size:18px;flex:none}
+.ib:hover{background:rgba(0,0,0,.06)}
+.ib svg{width:22px;height:22px}
+.tb-title{flex:1;min-width:0;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:15px}
+.book{max-width:1000px;margin:0 auto;padding:30px 20px 70px;display:grid;grid-template-columns:260px 1fr;gap:40px}
+@media (max-width:720px){.book{grid-template-columns:1fr;gap:24px}.book .cv{max-width:220px;margin:0 auto}}
+.book h2{font-size:clamp(22px,4vw,30px);line-height:1.6;margin:0 0 6px}
+.book .sub{color:var(--navy2);font-size:16px;line-height:1.8;margin:0 0 14px}
+.book .blurb{line-height:2;color:#3b3f4a;font-size:15.5px;margin:0 0 18px}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px}
+.meta span{background:var(--card);border:1px solid var(--line);border-radius:30px;padding:4px 12px;font-size:13px;color:var(--navy2)}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.btn{border:0;border-radius:10px;padding:12px 22px;font-size:15px;font-weight:600;background:var(--navy);color:#fff}
+.btn.gold{background:var(--gold);color:#1b1607}
+.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.toc h4{font-size:13px;letter-spacing:1px;color:var(--gold);margin:0 0 10px;font-weight:600}
+.toc ol{list-style:none;margin:0;padding:0;border-top:1px solid var(--line)}
+.toc li button{width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:11px 4px;font-size:15px;line-height:1.7;color:var(--ink);display:flex;gap:10px}
+.toc li button:hover{background:rgba(196,154,58,.08)}
+.toc li.l2 button{padding-left:22px;font-size:14.5px;color:#3b3f4a}
+.toc li.l1.part button{font-weight:600;color:var(--navy2)}
+.toc .k{color:var(--gold);white-space:nowrap;font-size:13px;padding-top:2px}
+.toc .cur{background:rgba(196,154,58,.14)}
+
+/* ---------- reader ---------- */
+.reader{min-height:100vh;background:var(--rbg);color:var(--rink);transition:background .2s}
+.reader{--rbg:#fbf7ee;--rink:#232733;--rmuted:#7a7466;--rline:#e7dfcc;--rbox:#f3ecdb;--racc:#9a7420}
+.reader.t-white{--rbg:#ffffff;--rink:#1d1f26;--rmuted:#6d6d6d;--rline:#e6e6e6;--rbox:#f5f5f2;--racc:#8a6a1e}
+.reader.t-dark{--rbg:#14171f;--rink:#dcd6c8;--rmuted:#8e887a;--rline:#2b303c;--rbox:#1d212b;--racc:#d6b464}
+.reader .topbar{background:color-mix(in srgb,var(--rbg) 92%,transparent);border-color:var(--rline)}
+.reader .ib{color:var(--rink)}
+.prog{position:absolute;left:0;bottom:-1px;height:2px;background:var(--gold);transition:width .2s}
+.page{max-width:720px;margin:0 auto;padding:34px 22px 30px;font-family:"Noto Serif Khmer","Noto Sans KR",serif;font-size:var(--rs);line-height:2.05}
+.page p{margin:0 0 .85em;text-align:justify;text-justify:inter-character}
+.page p.c{text-align:center}
+.page p.tt{text-align:center;font-size:1.15em;font-weight:600}
+.page p.qt{border-left:3px solid var(--racc);padding:4px 0 4px 16px;color:var(--rmuted)}
+.page p.li{padding-left:1.2em}
+.page p.hw{margin-top:1.6em;padding-top:.9em;border-top:1px solid var(--rline);font-size:1.1em;color:var(--racc)}
+.page .kick{text-align:center;color:var(--racc);font-family:"Kantumruy Pro",sans-serif;font-size:.8em;letter-spacing:1px;margin-top:.6em}
+.page h1,.page h2,.page h3,.page h4{font-family:"Kantumruy Pro","Noto Sans KR",sans-serif;line-height:1.65;margin:1.6em 0 .6em;font-weight:700}
+.page .pt{text-align:center;font-size:1.55em;margin:.3em 0 1.4em;padding-bottom:.7em;position:relative}
+.page .pt:after{content:"";position:absolute;left:50%;bottom:0;width:60px;height:2px;background:var(--gold);transform:translateX(-50%)}
+.page h2:not(.pt){font-size:1.3em}
+.page h3{font-size:1.14em;color:var(--racc)}
+.page h4{font-size:1.02em}
+.page .box{background:var(--rbox);border-radius:10px;padding:16px 18px;margin:1.2em 0;font-size:.92em;line-height:1.95}
+.page .tw{overflow-x:auto;margin:1.2em 0;-webkit-overflow-scrolling:touch}
+.page table{border-collapse:collapse;width:100%;font-size:.82em;line-height:1.75;font-family:"Kantumruy Pro","Noto Sans KR",sans-serif}
+.page td{border:1px solid var(--rline);padding:7px 10px;vertical-align:top;min-width:90px}
+.page tr:first-child td{background:var(--rbox);font-weight:600}
+.page sup.fn{color:var(--racc);font-family:"Kantumruy Pro",sans-serif;font-size:.65em;padding:0 2px;cursor:pointer;font-weight:700}
+.page ol.notes{margin:2.4em 0 0;padding:1.2em 0 0 1.4em;border-top:1px solid var(--rline);font-size:.78em;line-height:1.85;color:var(--rmuted)}
+.page ol.notes li{margin-bottom:.5em}
+.page mark{background:rgba(214,180,100,.45);color:inherit;border-radius:3px}
+.pager{max-width:720px;margin:0 auto;padding:10px 22px 60px;display:flex;gap:12px}
+.pager button{flex:1;background:var(--rbox);border:1px solid var(--rline);color:var(--rink);border-radius:12px;padding:14px;text-align:left;font-size:13px;line-height:1.6;min-height:64px}
+.pager button.nx{text-align:right}
+.pager small{display:block;color:var(--rmuted);font-size:12px}
+.pager button:disabled{visibility:hidden}
+
+/* drawer & panels */
+.scrim{position:fixed;inset:0;background:rgba(0,0,0,.35);z-index:40}
+.drawer{position:fixed;top:0;bottom:0;left:0;width:min(380px,88vw);background:var(--rbg,#fff);color:var(--rink,#222);z-index:41;display:flex;flex-direction:column;box-shadow:8px 0 30px rgba(0,0,0,.2)}
+.drawer header{display:flex;align-items:center;gap:8px;padding:12px 12px 12px 18px;border-bottom:1px solid var(--rline)}
+.drawer header b{flex:1;font-size:15px}
+.drawer .body{overflow-y:auto;padding:6px 14px 30px;flex:1}
+.drawer .toc ol{border-top:0}
+.drawer .toc li button{color:var(--rink);border-color:var(--rline)}
+.drawer .toc li.l2 button{color:var(--rink);opacity:.85}
+.panel{position:fixed;right:12px;top:62px;z-index:41;background:var(--rbg);color:var(--rink);border:1px solid var(--rline);border-radius:14px;padding:16px;width:280px;box-shadow:0 14px 40px rgba(0,0,0,.18)}
+.panel .row{display:flex;align-items:center;gap:8px;margin-bottom:14px}
+.panel .row:last-child{margin-bottom:0}
+.panel label{font-size:13px;color:var(--rmuted);width:70px}
+.seg{display:flex;flex:1;border:1px solid var(--rline);border-radius:10px;overflow:hidden}
+.seg button{flex:1;border:0;background:transparent;color:var(--rink);padding:9px 0;font-size:14px}
+.seg button.on{background:var(--gold);color:#1b1607;font-weight:600}
+.sw{width:26px;height:26px;border-radius:50%;border:2px solid var(--rline)}
+.search{display:flex;gap:8px;padding:12px 14px;border-bottom:1px solid var(--rline)}
+.search input{flex:1;font-family:inherit;font-size:16px;padding:10px 12px;border-radius:10px;border:1px solid var(--rline);background:var(--rbox);color:var(--rink);-webkit-user-select:text;user-select:text}
+.res button{display:block;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--rline);padding:10px 4px;color:var(--rink);font-size:14px;line-height:1.8}
+.res small{display:block;color:var(--racc);font-size:12px}
+.res .none{color:var(--rmuted);padding:18px 4px;font-size:14px}
+.note-pop{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);width:min(560px,92vw);background:var(--rbg);color:var(--rink);border:1px solid var(--rline);border-radius:14px;padding:16px 44px 16px 18px;z-index:45;box-shadow:0 14px 40px rgba(0,0,0,.25);font-size:15px;line-height:1.9;font-family:"Noto Serif Khmer",serif}
+.note-pop .x{position:absolute;right:6px;top:6px}
+.loading{text-align:center;padding:80px 20px;color:var(--muted)}
+.toast{position:fixed;left:50%;top:70px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 18px;border-radius:30px;font-size:14px;z-index:60;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+</style>
+</head>
+<body>
+
+<!-- ================= LIBRARY ================= -->
+<section id="vLib">
+  <header class="hero">
+    <div class="gem">◆ ◆ ◆</div>
+    <h1>បណ្ណាល័យថេអូខៃរ៉ុស</h1>
+    <p class="by">ស្នាដៃនិពន្ធ និងរៀបរៀងដោយ <b>យឿន វ៉ាន់ដា</b></p>
+    <div class="inst">វិទ្យាស្ថានទេវសាស្ត្រថេអូខៃរ៉ុស<span>DEOKAIROS THEOLOGICAL SEMINARY</span></div>
+  </header>
+  <main class="lib">
+    <p class="intro">សៀវភៅទាំងអស់ក្នុងបណ្ណាល័យនេះ អាចអានបានដោយឥតគិតថ្លៃ និងមិនចាំបាច់ចុះឈ្មោះ សម្រាប់អ្នកជឿ ក្រុមសិក្សាព្រះគម្ពីរ គ្រូគង្វាល និងនិស្សិតទេវវិទ្យា។ សូមជ្រើសរើសសៀវភៅមួយក្បាល ដើម្បីចាប់ផ្ដើមអាន។</p>
+    <div class="grid" id="grid"></div>
+  </main>
+  <footer class="foot">
+    © វិទ្យាស្ថានទេវសាស្ត្រថេអូខៃរ៉ុស · យឿន វ៉ាន់ដា<br>
+    ខគម្ពីរដកស្រង់ពីព្រះគម្ពីរខ្មែរបកប្រែចាស់ ១៩៥៤<br>
+    <i>SOLI DEO GLORIA</i>
+  </footer>
+</section>
+
+<!-- ================= BOOK ================= -->
+<section id="vBook" class="hidden">
+  <div class="topbar">
+    <button class="ib" data-act="home" aria-label="ត្រឡប់ទៅបណ្ណាល័យ"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <div class="tb-title">បណ្ណាល័យថេអូខៃរ៉ុស</div>
+  </div>
+  <div class="book" id="bookBody"></div>
+</section>
+
+<!-- ================= READER ================= -->
+<section id="vRead" class="reader hidden">
+  <div class="topbar" style="position:sticky">
+    <button class="ib" data-act="back" aria-label="ត្រឡប់"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg></button>
+    <button class="ib" data-act="toc" aria-label="មាតិកា"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></button>
+    <div class="tb-title" id="rTitle"></div>
+    <button class="ib" data-act="search" aria-label="ស្វែងរក"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg></button>
+    <button class="ib" data-act="settings" aria-label="ការកំណត់អក្សរ" style="font-weight:700;font-size:16px">Aa</button>
+    <div class="prog" id="prog"></div>
+  </div>
+  <article class="page" id="page"></article>
+  <nav class="pager">
+    <button id="pPrev"><small>← មុន</small><span></span></button>
+    <button id="pNext" class="nx"><small>បន្ទាប់ →</small><span></span></button>
+  </nav>
+
+  <div class="scrim hidden" id="scrim"></div>
+  <aside class="drawer hidden" id="dToc">
+    <header><b>មាតិកា</b><button class="ib" data-act="close">✕</button></header>
+    <div class="body toc"><ol id="tocList"></ol></div>
+  </aside>
+  <aside class="drawer hidden" id="dSearch">
+    <header><b>ស្វែងរកក្នុងសៀវភៅ</b><button class="ib" data-act="close">✕</button></header>
+    <form class="search" id="sForm"><input id="sInput" type="search" placeholder="វាយពាក្យដែលចង់រក…" autocomplete="off"><button class="btn gold" style="padding:10px 14px">រក</button></form>
+    <div class="body res" id="sRes"></div>
+  </aside>
+  <div class="panel hidden" id="pSet">
+    <div class="row"><label>ទំហំអក្សរ</label><div class="seg" id="segSize"><button data-s="-1">ក−</button><button data-s="1">ក+</button></div></div>
+    <div class="row"><label>ពណ៌ទំព័រ</label><div class="seg" id="segTheme"><button data-t="paper">ក្រដាស</button><button data-t="white">ស</button><button data-t="dark">ងងឹត</button></div></div>
+  </div>
+  <div class="note-pop hidden" id="notePop"><button class="ib x" data-act="closenote">✕</button><div></div></div>
+</section>
+<div class="toast" id="toast"></div>
+
+<script>
+(function(){
+const BOOKS=[
+ {id:'church',file:'church',title:'ប្រវត្តិសាស្ត្រក្រុមជំនុំ',sub:'ការសិក្សាស្វែងយល់តាមយុគសម័យ ចាប់ពីថ្ងៃបុណ្យទី៥០ រហូតដល់សតវត្សទី២១',
+  blurb:'ពីបន្ទប់ជាន់លើមួយនៅក្រុងយេរូសាឡិម ដល់វាលពិឃាតនៅប្រទេសកម្ពុជា នេះជាដំណើររឿងនៃភាពស្មោះត្រង់របស់ព្រះជាម្ចាស់ អស់រយៈពេលជាង ២០ សតវត្ស។ សៀវភៅនេះដើរតាមដាននៃពួកជំនុំ ឆ្លងកាត់ការបៀតបៀនរបស់ចក្រភពរ៉ូម៉ាំង យុគសម័យងងឹត ការកែទម្រង់សាសនា និងសតវត្សដ៏អស្ចារ្យនៃបេសកកម្ម រហូតដល់ក្រុមជំនុំខ្មែរនាសតវត្សទី២១។',
+  meta:['១៥ ជំពូក','បោះពុម្ពលើកទី២','តារាងកាលប្បវត្តិ','សទ្ទានុក្រម']},
+ {id:'systematic',file:'systematic',title:'ប្រព័ន្ធទេវសាស្ត្រនៃព្រះគម្ពីរ',sub:'Systematic Theology · គោលលទ្ធិគ្រឹះទាំងប្រាំបួនផ្នែក ពីការបើកសម្ដែងដល់គ្រាចុងក្រោយ',
+  blurb:'ប្រព័ន្ធទេវសាស្ត្រមិនមែនជាមុខវិជ្ជាសម្រាប់សាលាតែប៉ុណ្ណោះឡើយ។ សៀវភៅនេះនាំអ្នកអានឆ្លងកាត់គោលលទ្ធិគ្រឹះទាំងប្រាំបួននៃជំនឿប្រូតេស្តង់ ដែលជំពូកនីមួយៗមានគោលបំណងសិក្សា តារាងប្រៀបធៀប ប្រវត្តិនៃគោលលទ្ធិ ការឆ្លើយតបចំណោទ ការអនុវត្តក្នុងបរិបទគង្វាល និងសំណួរពិភាក្សា។',
+  meta:['៣៣ ជំពូក','៩ ផ្នែក','បោះពុម្ពលើកទីពីរ','សន្ទានុក្រម']},
+ {id:'creator',file:'creator',title:'ព្រះអាទិករ និង សត្តនិករដែលទ្រង់បង្កើត',sub:'ទេវវិទ្យាស្ដីពីអធិបតេយ្យភាពរបស់ព្រះជាម្ចាស់',
+  blurb:'ព្រះទ្រង់នៅឯណា ពេលខ្ញុំត្រូវការទ្រង់បំផុត? សៀវភៅនេះមិនផ្ដល់ចម្លើយងាយៗទេ។ វានាំអ្នកត្រឡប់ទៅកាន់ព្រះគម្ពីរវិញ ដើម្បីស្គាល់ព្រះដែលគ្រប់គ្រងលើសព្វសារពើ ជាព្រះដែលមិនដែលភ្លេចសត្តនិកររបស់ទ្រង់ សូម្បីតែចាបមួយក្បាលក៏ដោយ។',
+  meta:['៧ ជំពូក','៤៩ មេរៀន','២៦០+ ខគម្ពីរ','សំណួរពិភាក្សា']},
+ {id:'times',file:'times',title:'ទិដ្ឋភាពសម័យកាលក្នុងព្រះគម្ពីរ',sub:'ភូមិសាស្ត្រ · ទំនៀមទម្លាប់ · សាសនា · ការរស់នៅ',
+  blurb:'អានព្រះគម្ពីរដូចអ្នកស្ដាប់ដំបូងបានឮ។ សៀវភៅនេះនាំអ្នកអានធ្វើដំណើរឆ្លងកាត់ជាងពីរពាន់ឆ្នាំ ពីសម័យអយ្យកោ រហូតដល់ក្រុមជំនុំដំបូង ដើម្បីយល់ពីភូមិសាស្ត្រ ទំនៀមទម្លាប់ សាសនា និងជីវិតប្រចាំថ្ងៃ នៃមនុស្សជំនាន់ព្រះគម្ពីរ។',
+  meta:['៣១ ជំពូក','៧ ភាគ','ខគម្ពីរយោងជាង ៣០០០']},
+ {id:'silent',file:'silent',title:'យុគសម័យអន្តរកាល',sub:'៤០០ ឆ្នាំនៃភាពស្ងាត់ស្ងៀម · ពីហោរាម៉ាឡាគី ដល់យប់មួយនៅបេថ្លេហិម',
+  blurb:'រវាងពាក្យចុងក្រោយរបស់ហោរាម៉ាឡាគី និងសំឡេងដំបូងរបស់យ៉ូហាន-បាទីស្ទ មានចន្លោះពេលប្រមាណបួនរយឆ្នាំ។ ប៉ុន្តែភាពស្ងាត់ស្ងៀមនោះមិនមែនជាអវត្តមានរបស់ព្រះឡើយ វាជាសិក្ខាសាលាដ៏ធំមួយ ដែលព្រះកំពុងរៀបចំឆាកប្រវត្តិសាស្ត្រសម្រាប់កាលកំណត់។',
+  meta:['៨ ជំពូក','៣ ឧបសម្ព័ន្ធ','បោះពុម្ពលើកទីពីរ']},
+ {id:'dict',file:'dict',title:'វចនានុក្រមព្រះគម្ពីរ',sub:'កូរ៉េ–ខ្មែរ · ខ្មែរ–កូរ៉េ · 한-캄 · 캄-한 성경 사전',
+  blurb:'វចនានុក្រមនេះរៀបចំឡើងសម្រាប់គ្រីស្ទបរិស័ទខ្មែរដែលសិក្សាទេវវិទ្យាជាភាសាកូរ៉េ និងសម្រាប់បេសកជនកូរ៉េដែលបម្រើនៅកម្ពុជា។ ធាតុនីមួយៗមានការសរសេរជាអក្សរឡាតាំង ប្រភេទពាក្យ ពាក្យដើមហេព្រើរ ឬក្រិក និយមន័យជាពីរភាសា ខគម្ពីរពេញ និងកំណត់សម្គាល់ខាងទេវវិទ្យា។',
+  meta:['៨០៤ ធាតុពេញលេញ','៦,៦២២ ពាក្យពីរទិស','៦០២ ខគម្ពីរ'],search:true},
+];
+const BG={church:'#08101f',creator:'#f4efdf',dict:'#ffffff',times:'#f9f2e0',silent:'#1c2c4d',systematic:'#f6f5f0'};
+const $=s=>document.querySelector(s);
+const store={get(k,d){try{const v=localStorage.getItem('tk_'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('tk_'+k,JSON.stringify(v))}catch(e){}}};
+const cache={};
+let book=null,pages=null,pi=0,plain=null;
+const K=n=>String(n).replace(/\d/g,d=>'០១២៣៤៥៦៧៨៩'[d]);
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function toast(t){const el=$('#toast');el.textContent=t;el.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(()=>el.classList.remove('on'),1800)}
+
+/* ---- library grid ---- */
+$('#grid').innerHTML=BOOKS.map(b=>`<button class="cardb" data-open="${b.id}"><div class="cv" style="background:${BG[b.id]}"><img src="covers/${b.id}.jpg" alt="${esc(b.title)}" draggable="false" loading="lazy"></div><h3>${esc(b.title)}</h3><p>${esc(b.meta.slice(0,2).join(' · '))}</p></button>`).join('');
+
+function show(v){['vLib','vBook','vRead'].forEach(id=>$('#'+id).classList.toggle('hidden',id!==v));closeAll();}
+
+async function load(b){
+  if(cache[b.id]) return cache[b.id];
+  const r=await fetch('books/'+b.file+'.json');
+  if(!r.ok) throw new Error('load');
+  return cache[b.id]=await r.json();
+}
+
+function tocHtml(cur){
+  return pages.map((p,i)=>{
+    const part=p.l===1&&pages[i+1]&&pages[i+1].l===2;
+    return `<li class="l${p.l}${part?' part':''}"><button data-go="${i}" class="${i===cur?'cur':''}">${p.k?`<span class="k">${esc(p.k)}</span>`:''}<span>${esc(p.t)}</span></button></li>`;
+  }).join('');
+}
+
+async function openBook(id){
+  book=BOOKS.find(b=>b.id===id); if(!book) return route('');
+  show('vBook'); window.scrollTo(0,0);
+  $('#vBook .tb-title').textContent=book.title;
+  const saved=store.get('pos_'+id,null);
+  $('#bookBody').innerHTML=`<div><div class="cv" style="background:${BG[id]}"><img src="covers/${id}.jpg" alt="" draggable="false"></div></div>
+   <div><h2>${esc(book.title)}</h2><p class="sub">${esc(book.sub)}</p><div class="meta">${book.meta.map(m=>`<span>${esc(m)}</span>`).join('')}</div>
+   <p class="blurb">${esc(book.blurb)}</p>
+   <div class="actions"><button class="btn" data-read="0">ចាប់ផ្ដើមអាន</button>${saved?`<button class="btn gold" data-read="${saved.p}">បន្តអាន</button>`:''}</div>
+   <div class="toc"><h4>មាតិកា</h4><ol id="bookToc"><li class="loading" style="padding:20px">កំពុងផ្ទុក…</li></ol></div></div>`;
+  try{pages=await load(book);plain=null;$('#bookToc').innerHTML=tocHtml(-1);}
+  catch(e){$('#bookToc').innerHTML='<li class="loading" style="padding:20px">មិនអាចផ្ទុកសៀវភៅបានទេ។ សូមពិនិត្យអ៊ីនធឺណិត ហើយសាកម្ដងទៀត។</li>';}
+}
+
+async function openPage(id,i,opts={}){
+  book=BOOKS.find(b=>b.id===id); if(!book) return route('');
+  show('vRead');
+  $('#rTitle').textContent=book.title;
+  if(!pages||cache[id]!==pages){ $('#page').innerHTML='<div class="loading">កំពុងផ្ទុកសៀវភៅ…</div>'; try{pages=await load(book);plain=null}catch(e){$('#page').innerHTML='<div class="loading">មិនអាចផ្ទុកបានទេ។ សូមសាកម្ដងទៀត។</div>';return} }
+  pi=Math.max(0,Math.min(pages.length-1,i|0));
+  const p=pages[pi];
+  $('#page').innerHTML=p.h;
+  const pv=pages[pi-1],nx=pages[pi+1];
+  $('#pPrev').disabled=!pv; $('#pNext').disabled=!nx;
+  $('#pPrev span').textContent=pv?pv.t:''; $('#pNext span').textContent=nx?nx.t:'';
+  $('#prog').style.width=((pi+1)/pages.length*100)+'%';
+  store.set('pos_'+id,{p:pi});
+  if(opts.find){ highlight(opts.find); } else window.scrollTo(0,0);
+}
+
+function highlight(term){
+  const root=$('#page'); const walker=document.createTreeWalker(root,NodeFilter.SHOW_TEXT);
+  let n,first=null; const hits=[];
+  while(n=walker.nextNode()){ if(n.nodeValue.replace(/​/g,'').includes(term)) hits.push(n) }
+  hits.slice(0,60).forEach(node=>{
+    const txt=node.nodeValue; // map term across ZWSP-free text
+    const clean=txt.replace(/​/g,''); const idx=clean.indexOf(term); if(idx<0) return;
+    // find raw index
+    let c=0,start=-1,end=-1;
+    for(let j=0;j<txt.length;j++){ if(txt[j]==='​') continue; if(c===idx&&start<0) start=j; c++; if(c===idx+term.length){end=j+1;break} }
+    if(start<0||end<0) return;
+    const r=document.createRange(); r.setStart(node,start); r.setEnd(node,end);
+    const m=document.createElement('mark'); try{r.surroundContents(m)}catch(e){return}
+    if(!first) first=m;
+  });
+  if(first){ const y=first.getBoundingClientRect().top+window.scrollY-120; window.scrollTo(0,y) } else window.scrollTo(0,0);
+}
+
+/* ---- routing on plain #hash ---- */
+function route(h){ if(location.hash.slice(1)!==h){ location.hash=h; } else render(); }
+function render(){
+  const h=location.hash.slice(1);
+  if(!h) { show('vLib'); return; }
+  const m=h.match(/^([a-z]+)(?:-(\d+))?$/);
+  if(!m) { show('vLib'); return; }
+  if(m[2]!==undefined){ const f=pendingFind; pendingFind=null; openPage(m[1],+m[2],{find:f}); }
+  else openBook(m[1]);
+}
+let pendingFind=null;
+window.addEventListener('hashchange',render);
+
+/* ---- panels ---- */
+function closeAll(){['#scrim','#dToc','#dSearch','#pSet','#notePop'].forEach(s=>$(s).classList.add('hidden'))}
+function openDrawer(id){closeAll();$('#scrim').classList.remove('hidden');$(id).classList.remove('hidden')}
+
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-open],[data-read],[data-go],[data-act],sup.fn,#pPrev,#pNext,#segSize button,#segTheme button,.res button');
+  if(!t){ if(!e.target.closest('#pSet')) $('#pSet').classList.add('hidden'); return; }
+  if(t.dataset.open) return route(t.dataset.open);
+  if(t.dataset.read!==undefined) return route(book.id+'-'+t.dataset.read);
+  if(t.dataset.go!==undefined){ closeAll(); return route(book.id+'-'+t.dataset.go); }
+  if(t.id==='pPrev') return route(book.id+'-'+(pi-1));
+  if(t.id==='pNext') return route(book.id+'-'+(pi+1));
+  if(t.matches('sup.fn')){ const n=+t.dataset.n; const li=$('#page ol.notes')?.children[n-1]; if(li){ const pop=$('#notePop'); pop.querySelector('div').textContent=K(n)+'. '+li.textContent; pop.classList.remove('hidden'); } return; }
+  if(t.matches('#segSize button')){ setSize(store.get('size',19)+(+t.dataset.s)); return; }
+  if(t.matches('#segTheme button')){ setTheme(t.dataset.t); return; }
+  if(t.matches('.res button')){ closeAll(); pendingFind=t.dataset.q; const target=book.id+'-'+t.dataset.p; if(location.hash.slice(1)===target){ openPage(book.id,+t.dataset.p,{find:pendingFind}); pendingFind=null } else route(target); return; }
+  const a=t.dataset.act;
+  if(a==='home') return route('');
+  if(a==='back') return route(book?book.id:'');
+  if(a==='toc'){ $('#tocList').innerHTML=tocHtml(pi); openDrawer('#dToc'); const c=$('#tocList .cur'); if(c) c.scrollIntoView({block:'center'}); return; }
+  if(a==='search'){ openDrawer('#dSearch'); setTimeout(()=>$('#sInput').focus(),50); return; }
+  if(a==='settings'){ const p=$('#pSet'); const was=p.classList.contains('hidden'); closeAll(); if(was) p.classList.remove('hidden'); return; }
+  if(a==='close') return closeAll();
+  if(a==='closenote') return $('#notePop').classList.add('hidden');
+});
+$('#scrim').addEventListener('click',closeAll);
+
+/* ---- search ---- */
+$('#sForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const q=$('#sInput').value.replace(/​/g,'').trim(); const out=$('#sRes');
+  if(!q){out.innerHTML='';return}
+  if(!plain){ const d=document.createElement('div'); plain=pages.map(p=>{d.innerHTML=p.h.replace(/<\/(p|h\d|li|td|div)>|<br>/g,' $&'); return d.textContent.replace(/​/g,'')}); }
+  const res=[];
+  for(let i=0;i<plain.length&&res.length<80;i++){
+    let from=0,idx;
+    while((idx=plain[i].indexOf(q,from))>=0&&res.length<80){
+      const s=Math.max(0,idx-40), snip=plain[i].slice(s,idx+q.length+60);
+      res.push({p:i,snip:(s?'…':'')+snip+'…'}); from=idx+q.length;
+      if(res.filter(r=>r.p===i).length>=5) break;
+    }
+  }
+  out.innerHTML=res.length? `<div class="none" style="padding:10px 4px">រកឃើញ ${K(res.length)}${res.length>=80?'+':''} កន្លែង</div>`+res.map(r=>`<button data-p="${r.p}" data-q="${esc(q)}"><small>${esc(pages[r.p].t)}</small>${esc(r.snip).split(esc(q)).join('<mark>'+esc(q)+'</mark>')}</button>`).join('') : '<div class="none">រកមិនឃើញពាក្យនេះទេ។</div>';
+});
+
+/* ---- settings ---- */
+function setSize(s){ s=Math.max(15,Math.min(28,s)); store.set('size',s); document.documentElement.style.setProperty('--rs',s+'px'); }
+function setTheme(t){ store.set('theme',t); const r=$('#vRead'); r.classList.remove('t-white','t-dark'); if(t!=='paper') r.classList.add('t-'+t); document.querySelectorAll('#segTheme button').forEach(b=>b.classList.toggle('on',b.dataset.t===t)); }
+setSize(store.get('size',19)); setTheme(store.get('theme','paper'));
+
+/* ---- keyboard & protection ---- */
+['copy','cut','contextmenu','dragstart','selectstart'].forEach(ev=>document.addEventListener(ev,e=>{ if(e.target.closest&&e.target.closest('input')) return; e.preventDefault(); if(ev==='copy') toast('សៀវភៅនេះសម្រាប់អានលើគេហទំព័រប៉ុណ្ណោះ'); }));
+document.addEventListener('keydown',e=>{
+  const k=e.key.toLowerCase();
+  if((e.ctrlKey||e.metaKey)&&['c','x','s','p','a','u'].includes(k)&&!e.target.closest('input')){ e.preventDefault(); toast('សៀវភៅនេះសម្រាប់អានលើគេហទំព័រប៉ុណ្ណោះ'); return; }
+  if(e.target.closest('input')) return;
+  if($('#vRead').classList.contains('hidden')) return;
+  if(k==='arrowright'&&pi<pages.length-1) route(book.id+'-'+(pi+1));
+  if(k==='arrowleft'&&pi>0) route(book.id+'-'+(pi-1));
+  if(k==='escape') closeAll();
+});
+
+render();
+})();
+</script>
+</body>
+</html>
