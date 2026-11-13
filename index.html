@@ -58,6 +58,18 @@ img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
 @media (max-width:720px){.author p{text-align:left}}
 .author .au-motto{font-family:"Noto Serif Khmer",serif;font-size:17px;color:var(--navy2);border-left:3px solid var(--gold);padding-left:14px;text-align:left}
 .author .au-sdg{font-style:italic;color:var(--gold);margin-top:18px;text-align:center}
+.support{margin:40px auto 0;max-width:960px;display:grid;grid-template-columns:1fr 260px;gap:36px;align-items:center;background:var(--navy);color:#efe4c8;border-radius:18px;padding:36px;position:relative;overflow:hidden}
+.support:before{content:"";position:absolute;left:36px;right:36px;top:0;height:3px;background:linear-gradient(90deg,transparent,var(--gold),transparent)}
+@media (max-width:720px){.support{grid-template-columns:1fr;padding:26px 20px;text-align:center}.sp-qr{margin:0 auto}}
+.sp-kick{color:var(--gold2);font-size:13px;letter-spacing:2px;font-weight:600}
+.support h2{font-family:Moul,serif;font-weight:400;color:var(--gold2);font-size:clamp(20px,3vw,26px);line-height:1.7;margin:6px 0 12px}
+.support p{line-height:2;font-size:15.5px;margin:0 0 10px;color:#e6dcc4}
+.sp-acc{display:flex;gap:12px;flex-wrap:wrap;margin-top:14px}
+@media (max-width:720px){.sp-acc{justify-content:center}}
+.sp-acc div{background:rgba(255,255,255,.08);border:1px solid rgba(230,200,120,.35);border-radius:12px;padding:10px 16px;font-size:13px;color:#c8bfa8}
+.sp-acc b{display:block;font-size:19px;color:#fff;letter-spacing:1px;font-family:Georgia,serif;font-weight:600;-webkit-user-select:text;user-select:text}
+.sp-qr{width:240px;background:#fff;border-radius:14px;padding:8px;box-shadow:0 14px 30px -10px rgba(0,0,0,.6)}
+.sp-qr img{width:100%;display:block;border-radius:8px}
 .foot{margin-top:60px;text-align:center;color:var(--muted);font-size:13px;padding:24px 16px 40px;border-top:1px solid var(--line);line-height:1.9}
 .foot i{font-family:Georgia,serif;letter-spacing:2px}
 
@@ -178,6 +190,21 @@ img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
         <p>បណ្ណាល័យនេះគឺជាអំណោយរបស់លោកដល់ក្រុមជំនុំខ្មែរ៖ សៀវភៅទាំងអស់ អានបានដោយឥតគិតថ្លៃ គ្រប់ទីកន្លែង គ្រប់ពេលវេលា។</p>
         <p class="au-sdg">Soli Deo Gloria — សូមថ្វាយសិរីល្អដល់ព្រះជាម្ចាស់តែមួយ</p>
       </div>
+    </section>
+
+    <section class="support">
+      <div>
+        <div class="sp-kick">គាំទ្របណ្ណាល័យ</div>
+        <h2>ចូលរួមចែកចាយព្រះបន្ទូល</h2>
+        <p>បណ្ណាល័យនេះផ្ដល់ជូនដោយឥតគិតថ្លៃ។ ប្រសិនបើសៀវភៅទាំងនេះបានជាពរដល់លោកអ្នក ហើយលោកអ្នកមានបំណងចូលរួមគាំទ្រ ការឧបត្ថម្ភរបស់លោកអ្នកនឹងជួយឲ្យយើងអាចនិពន្ធ បកប្រែ និងចែកចាយសៀវភៅថ្មីៗបន្ថែមទៀត ដល់ក្រុមជំនុំខ្មែរ។</p>
+        <p>សូមស្កេន KHQR ឬផ្ទេរប្រាក់ចូលគណនី Wing Bank របស់យើង។ សូមអរព្រះគុណ!</p>
+        <div class="sp-acc">
+          <div>គណនីប្រាក់រៀល<b>027 633 09</b></div>
+          <div>គណនីប្រាក់ដុល្លារ<b>027 633 30</b></div>
+          <div>ឈ្មោះគណនី<b>YOEURN VANNDA</b></div>
+        </div>
+      </div>
+      <div class="sp-qr"><img src="covers/khqr.jpg" alt="KHQR Wing Bank — YOEURN VANNDA"></div>
     </section>
   </main>
   <footer class="foot">
