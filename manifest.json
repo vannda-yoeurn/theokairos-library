@@ -1,0 +1,14 @@
+{
+  "name": "បណ្ណាល័យ ថេអូខៃរ៉ុស",
+  "short_name": "ថេអូខៃរ៉ុស",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14234a",
+  "theme_color": "#14234a",
+  "lang": "km",
+  "icons": [
+    {"src": "covers/icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "covers/icon-512.png", "sizes": "512x512", "type": "image/png"}
+  ]
+}
