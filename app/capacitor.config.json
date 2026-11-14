@@ -1,0 +1,9 @@
+{
+  "appId": "org.deokairos.library",
+  "appName": "បណ្ណាល័យថេអូខៃរ៉ុស",
+  "webDir": "www",
+  "android": {
+    "allowMixedContent": false,
+    "backgroundColor": "#14234a"
+  }
+}
