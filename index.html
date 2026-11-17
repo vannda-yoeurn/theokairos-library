@@ -407,7 +407,7 @@ function route(h){ if(location.hash.slice(1)!==h){ location.hash=h; } else rende
 function render(){
   const h=location.hash.slice(1);
   if(!h) { show('vLib'); return; }
-  const m=h.match(/^([a-z]+)(?:-(\d+))?$/);
+  const m=BOOKS.some(b=>b.id===h)?[h,h,undefined]:h.match(/^([a-z0-9-]+?)-(\d+)$/);
   if(!m) { show('vLib'); return; }
   if(m[2]!==undefined){ const f=pendingFind; pendingFind=null; openPage(m[1],+m[2],{find:f}); }
   else openBook(m[1]);
