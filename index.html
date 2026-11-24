@@ -267,6 +267,9 @@ img{-webkit-user-drag:none;user-drag:none;pointer-events:none}
 <script>
 (function(){
 const BOOKS=[
+ {id:'bible66',file:'bible66',title:'សេចក្ដីផ្ដើមនៃព្រះគម្ពីរ ៦៦ គម្ពីរ',sub:'អ្នកនិពន្ធ ផ្ទៃរឿង គ្រោង ប្រធានបទ និងព្រះគ្រីស្ទ ក្នុងគម្ពីរនីមួយៗ ពីលោកុប្បត្តិ ដល់វិវរណៈ',
+  blurb:'មគ្គុទ្ទេសក៍ សម្រាប់អានព្រះគម្ពីរ ទាំងមូល។ ភាគទី ១ ពន្យល់ថា ព្រះគម្ពីរ ជាអ្វី វាមកដល់យើង យ៉ាងដូចម្ដេច ប្រវត្តិ នៃព្រះគម្ពីរ ខ្មែរ និងរឿងធំ នៃព្រះគម្ពីរ។ បន្ទាប់មក គម្ពីរ ទាំង ៦៦ នីមួយៗ មានតារាងព័ត៌មាន ខគន្លឹះ ផ្ទៃរឿង គ្រោង ប្រធានបទ «ព្រះគ្រីស្ទ» ក្នុងគម្ពីរ នោះ មេរៀន និងសំណួរ សម្រាប់ក្រុមតូច។ មានផែនការអានព្រះគម្ពីរ ក្នុងមួយឆ្នាំ សទ្ទានុក្រម និងលិបិក្រមខគម្ពីរ។',
+  meta:['៦៦ គម្ពីរ','៩ ភាគ','៥ ឧបសម្ព័ន្ធ + ផែនការអាន ១ ឆ្នាំ','សម្រាប់គ្រីស្ទាន គ្រប់រូប']},
  {id:'newlife5',file:'newlife5',title:'ការបម្រើ និងការផ្សាយដំណឹងល្អ',sub:'ស៊េរី ជីវិតថ្មីក្នុងព្រះគ្រីស្ទ · ភាគទី ៥ · សៀវភៅសិក្សាសម្រាប់ក្រុមតូច',
   blurb:'ភាគចុងក្រោយ ប្រាំបីមេរៀន ដែលបង្វឹកអ្នកជឿ ឲ្យក្លាយជាអ្នកបង្កើតសិស្ស — ការហៅឲ្យបង្កើតសិស្ស ការប្រាប់ដំណឹងល្អ ដំណឹងល្អក្នុងបរិបទខ្មែរ ការឆ្លើយសំណួរ ការដឹកនាំក្រុមតូច ការបម្រើអ្នកក្រ បេសកកម្ម និងការបណ្ដុះអ្នកជឿថ្មី។',
   meta:['៨ មេរៀន','ក្រុមតូច','ខទន្ទេញ','ភាគទី ៥']},
@@ -331,7 +334,7 @@ const BOOKS=[
   blurb:'វចនានុក្រមនេះរៀបចំឡើងសម្រាប់គ្រីស្ទបរិស័ទខ្មែរដែលសិក្សាទេវសាស្ត្រជាភាសាកូរ៉េ និងសម្រាប់បេសកជនកូរ៉េដែលបម្រើនៅកម្ពុជា។ ធាតុនីមួយៗមានការសរសេរជាអក្សរឡាតាំង ប្រភេទពាក្យ ពាក្យដើមហេព្រើរ ឬក្រិក និយមន័យជាពីរភាសា ខគម្ពីរពេញ និងកំណត់សម្គាល់ខាងទេវសាស្ត្រ។',
   meta:['៨០៤ ធាតុពេញលេញ','៦,៦២២ ពាក្យពីរទិស','៦០២ ខគម្ពីរ'],search:true},
 ];
-const BG={leadership:'#2f6bff',calvinism:'#fbf8f1',newlife5:'#0d3440','newlife5-leader':'#0d3440',newlife4:'#121d45','newlife4-leader':'#121d45',newlife3:'#3b1712','newlife3-leader':'#3b1712',newlife2:'#1b3a26','newlife2-leader':'#1b3a26',newlife1:'#123f3f','newlife1-leader':'#123f3f',ordination:'#0e2a25',covenant:'#3a1022',shepherd:'#f7f5ef',church:'#08101f',creator:'#f4efdf',dict:'#ffffff',times:'#f9f2e0',silent:'#1c2c4d',systematic:'#f6f5f0'};
+const BG={bible66:'#0f4a3f',leadership:'#2f6bff',calvinism:'#fbf8f1',newlife5:'#0d3440','newlife5-leader':'#0d3440',newlife4:'#121d45','newlife4-leader':'#121d45',newlife3:'#3b1712','newlife3-leader':'#3b1712',newlife2:'#1b3a26','newlife2-leader':'#1b3a26',newlife1:'#123f3f','newlife1-leader':'#123f3f',ordination:'#0e2a25',covenant:'#3a1022',shepherd:'#f7f5ef',church:'#08101f',creator:'#f4efdf',dict:'#ffffff',times:'#f9f2e0',silent:'#1c2c4d',systematic:'#f6f5f0'};
 const $=s=>document.querySelector(s);
 const store={get(k,d){try{const v=localStorage.getItem('tk_'+k);return v==null?d:JSON.parse(v)}catch(e){return d}},set(k,v){try{localStorage.setItem('tk_'+k,JSON.stringify(v))}catch(e){}}};
 const cache={};
